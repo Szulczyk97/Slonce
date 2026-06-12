@@ -1,0 +1,295 @@
+:root{
+	--pogrubienie: bold;
+	--pozycja: absolute;
+	--wyswietlanie: flex;
+	--zaokraglenie: 50%;
+}
+
+body{
+	background-image: url("../obrazki_slonce/tapeta_slonce.webp");
+}
+
+#kontener{
+	width: 1500px;
+	margin: 20px auto 20px auto;
+	overflow-x: hidden;
+	text-align: center;
+	color: #E5E4E2;
+}
+
+#naglowek{
+	font-size: 52px;
+	font-family: arial;
+	font-weight: var(--pogrubienie);
+}
+
+#uklad{
+	width: 1200px;
+	height: 1200px;
+	margin: auto;
+	position: relative;
+	display: var(--wyswietlanie);
+	align-items: center;
+	justify-content: center;
+	animation: obrot 60s linear infinite;
+}
+
+@keyframes obrot{
+	from{
+		transform: rotate(0deg);
+	}to{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes obrot2{
+	from{
+		transform: rotate(360deg);
+	}to{
+		transform: rotate(0deg);
+	}
+}
+
+#slonce, #merkury, #wenus, #ziemia, #mars, #jowisz, #saturn, #uran, #neptun, #kometa{
+	position: var(--pozycja);
+	border-radius: var(--zaokraglenie);
+	border: 0.1px solid black;
+}
+
+#slonce{
+	width: 150px;
+	height: 150px;
+	background: radial-gradient(circle, #ffcc00, #ff9933);
+	animation: obrot 25s linear infinite alternate, swiatlo 25s linear infinite alternate;
+}
+
+@keyframes swiatlo{
+	from{
+		box-shadow: 0px 0px 5px 3px rgba(255, 204, 51, 85%);
+	}to{
+		box-shadow: 0px 0px 5px 6px rgba(255, 204, 0, 85%);
+	}
+}
+
+#merkury{
+	width: 9.9px;
+	height: 9.9px;
+	right: 595px;
+	bottom: 490px;
+	background: radial-gradient(circle, #323232 5%, #717171);
+	animation: obrot 6s linear infinite;
+}
+
+#wenus{
+	width: 15.9px;
+	height: 15.9px;
+	right: 505px;
+	top: 470px;
+	background: linear-gradient(to top right, #cc3300 15%, #FF7F00);
+	animation: obrot2 35s linear infinite;
+}
+
+#pole{
+	width: 50px;
+	height: 50px;
+	display: var(--wyswietlanie);
+	align-items: center;
+	position: var(--pozycja);
+	right: 385px;
+	animation: obrot 6s linear infinite;
+}
+
+#ksiezyc{
+	width: 7.9px;
+	height: 7.9px;
+	border-radius: var(--zaokraglenie);
+	border: 0.1px solid black;
+	background: #90a4ae;
+}
+
+#ziemia{
+	width: 15.9px;
+	height: 15.9px;
+	display: var(--wyswietlanie);
+	justify-content: center;
+	right: 400px;
+	background: radial-gradient(#29b6f6, #0277bd);
+	animation: obrot 12s linear infinite;
+}
+
+#lad{
+	width: 12px;
+	height: 12px;
+	margin-top: 2.2px;
+	background: linear-gradient(#2e7d32, #1b5e20, #43a047);
+	clip-path: polygon(50% 0%,80% 0,100% 54%,67% 53%,53% 100%,26% 19%,0 7%);
+}
+
+#mars{
+	width: 11.9px;
+	height: 11.9px;
+	right: 780px;
+	top: 520px;
+	background: linear-gradient(to top left, #B7410E, #cc0000, #cc3333);
+	animation: obrot 12s linear infinite;
+}
+
+#pas1, #pas2, #pas3{
+	position: var(--pozycja);
+	border-radius: var(--zaokraglenie);
+}
+
+#pas1{
+	width: 540px;
+	height: 540px;
+	border-top: 2.8px dotted #414141;
+}
+
+#pas2{
+	width: 550px;
+	height: 550px;
+	border-bottom: 3.6px dotted #414141;
+}
+
+#pas3{
+	width: 545px;
+	height: 545px;
+	border: 0.5px dotted #414141;
+}
+
+#jowisz{
+	width: 69.9px;
+	height: 69.9px;
+	right: 860px;
+	top: 730px;
+	background: radial-gradient(#ffb74d, #dd2c00, #e65100);
+	animation: obrot 2s linear infinite;
+}
+
+#saturn{
+	width: 53.9px;
+	height: 53.9px;
+	right: 940px;
+	top: 260px;
+	background: radial-gradient(#C2B280 25%, #B58C4F, #adadad);
+	animation: obrot 3s linear infinite;
+}
+
+#pierscien1, #pierscien2, #pierscien3{
+	position: var(--pozycja);
+	border-radius: var(--zaokraglenie);
+}
+
+#pierscien1{
+	width: 65px;
+	height: 65px;
+	right: 930px;
+	top: 250px;
+	border: 6px double #5d4037;
+}
+
+#pierscien2{
+	width: 85px;
+	height: 85px;
+	right: 920px;
+	top: 240px;
+	border: 6px solid #8d6e63;
+}
+
+#pierscien3{
+	width: 105px;
+	height: 105px;
+	right: 910px;
+	top: 230px;
+	border: 6px double #C2B280;
+}
+
+#uran{
+	width: 47.9px;
+	height: 47.9px;
+	right: 540px;
+	top: 115px;
+	background: radial-gradient(#ccffff, #6699ff);
+	animation: obrot2 4s linear infinite;
+}
+
+#neptun{
+	width: 43.9px;
+	height: 43.9px;
+	right: 75px;
+	top: 360px;
+	background: radial-gradient(#0066cc, #0000FF);
+	animation: obrot 4s linear infinite;
+}
+
+#kometa{
+	width: 2.5px;
+	height: 2.5px;
+	right: 230px;
+	top: 799px;
+	background: #66ffff;
+}
+
+#ogon1, #ogon2, #ogon3{
+	width: 80px;
+	height: 40px;
+	position: var(--pozycja);
+	right: 150px;
+}
+
+#ogon1{
+	top: 762px;
+	border-bottom-right-radius: 50%;
+	border-bottom: 1.3px dotted #009999;
+}
+
+#ogon2{
+	top: 760px;
+	border-bottom-right-radius: 43%;
+	border-bottom: 1.7px dotted #009999;
+}
+
+#ogon3{
+	top: 758px;
+	border-bottom-right-radius: 35%;
+	border-bottom: 1.5px dotted #009999;
+}
+
+#tytul{
+	margin: 5px auto 30px auto;
+	font-size: 35px;
+	font-weight: var(--pogrubienie);
+}
+
+#opisy{
+	margin: 0px 20px 0px 20px;
+}
+
+fieldset{
+	margin: 10px auto 20px auto;
+	text-align: justify;
+	font-size: 18px;
+	word-spacing: 1.5px;
+}
+
+legend{
+	font-size: 34px;
+}
+
+details{
+	text-align: center;
+}
+
+summary{
+	width: 250px;
+	margin: 2px auto 2px auto;
+	font-size: 22px;
+	font-weight: var(--pogrubienie);
+	cursor: pointer;
+}
+
+#stopka{
+	margin: 25px auto 5px auto;
+	font-size: 17px;
+	text-shadow: 0.5px 0.5px 1px #E5E4E2;
+}
